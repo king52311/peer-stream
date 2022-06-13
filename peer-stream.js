@@ -160,8 +160,8 @@ class PeerStream extends HTMLVideoElement {
   }
 
   disconnectedCallback() {
+    // lifecycle binding
     this.disconnectTimer = setTimeout(() => {
-      // WebRTC的生命周期与<video>的生命周期绑定
       this.ws.close(1000);
       this.pc.close();
       console.log("❌ peer connection closing");
@@ -174,7 +174,7 @@ class PeerStream extends HTMLVideoElement {
   static observedAttributes = ["signal"];
   attributeChangedCallback(name, oldValue, newValue) {
     if (!this.isConnected) return;
-    // fired before connectedCallback when startup  一开始会触发：oldValue从null变成newValue
+    // fired before connectedCallback when startup
     this.ws.close(1000);
   }
 
@@ -434,7 +434,7 @@ class PeerStream extends HTMLVideoElement {
     };
   }
 
-  // 触屏模拟鼠标
+  // touch as mouse
   registerFakeMouseEvents() {
     let finger = undefined;
 
@@ -640,7 +640,7 @@ class PeerStream extends HTMLVideoElement {
     }
     this.dc.send(data);
 
-    return true;
+    return 'sent';
   }
 
   normalize(x, y) {

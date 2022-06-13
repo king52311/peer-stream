@@ -1,6 +1,6 @@
-# Pixel Streamer: Unreal + WebRTC
+# peer-stream.js: Unreal + WebRTC
 
-Compared to EpicGame's heavily-designed SDK for Pixel Streaming, PixelStreamer is a lightweight WebRTC library with 0 dependency, containing a frontend component (using WebComponents API), along with a signaling server (using NodeJS).
+Compared to EpicGame's heavily-designed SDK for Pixel Streaming, peer-stream.js is a lightweight WebRTC library with 0 dependency, containing a frontend component (using WebComponents API), along with a signaling server (using NodeJS).
 
 - peer-stream.js (20KB): https://xosg.github.io/peer-stream/peer-stream.js
 - signal.js (5KB): https://xosg.github.io/peer-stream/signal.js
