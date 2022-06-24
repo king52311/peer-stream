@@ -1,4 +1,4 @@
-# peer-stream.js: Unreal + WebRTC
+# peer-stream.js
 
 Compared to EpicGame's heavily-designed SDK for Pixel Streaming, peer-stream.js is a lightweight WebRTC library with 0 dependency, containing a frontend component (using WebComponents API), along with a signaling server (using NodeJS).
 
@@ -41,7 +41,7 @@ common startup options:
 ```
  -PixelStreamingURL="ws://localhost:8888"
  -RenderOffScreen
- -unattended
+ -Unattended
  -ForceRes
  -windowed
  -ResX=1280

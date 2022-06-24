@@ -1,4 +1,4 @@
-"5.0.0";
+"5.0.1";
 
 // node signal.js player=88 engine=8888 token=hello limit=4
 
@@ -42,9 +42,9 @@ http
   .createServer()
   .on("upgrade", (request, socket, head) => {
     try {
-      // 认证
+      // password
       // if (request.url.slice(1) !== token) throw "";
-      if (PLAYER.clients.size >= limit) throw "";
+      // if (PLAYER.clients.size >= limit) throw "";
     } catch (err) {
       socket.destroy();
       return;
