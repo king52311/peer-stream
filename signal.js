@@ -58,7 +58,7 @@ http
   .createServer()
   .on("upgrade", (request, socket, head) => {
     try {
-      // 1个信令服务器只能连1个UE
+      // one signal one UE
       if (ENGINE.ws.readyState === WebSocket.OPEN) throw "";
     } catch (err) {
       socket.destroy();
@@ -110,7 +110,7 @@ ENGINE.on("connection", (ws, req) => {
   });
 
   ws.on("close", (code, reason) => {
-    // reason是buffer？？
+    // reason is buffer ??
     console.log("❌ Engine closed:", String(reason));
     for (const client of PLAYER.clients) {
       client.send(`❌ Engine:${engine} stopped`);

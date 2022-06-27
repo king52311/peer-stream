@@ -25,7 +25,7 @@ async function aggregateStats() {
   const statsReport = await ps.pc.getStats(null);
   stats.innerText = "";
 
-  // 大部分都 < 27
+  // most < 27
   if (ps.VideoEncoderQP < 27) {
     stats.style.color = "lime";
   } else if (ps.VideoEncoderQP < 36) {
